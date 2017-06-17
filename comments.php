@@ -52,13 +52,13 @@
                 <p><?php _e('Logged in as','html5reset'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account"><?php _e('Log out','html5reset'); ?> &raquo;</a></p>
             <?php else : ?>
                 <div>
-                    <input style="width: 40%;" placeholder="<?php _e('Name','html5reset'); ?> <?php if ($req) echo "(required)"; ?>" class="form-control comment-control" type="text" name="author-name-textbox" id="author" value="<?php echo esc_attr($comment_author); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+                    <input style="width: 40%;" placeholder="<?php _e('Name','html5reset'); ?> <?php if ($req) echo "(required)"; ?>" class="form-control comment-control" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
                 </div>
                 <div>
-                    <input style="width: 40%;" placeholder="<?php _e('Mail (will not be published)','html5reset'); ?> <?php if ($req) echo "(required)"; ?>" class="form-control comment-control" type="text" name="email-textbox" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+                    <input style="width: 40%;" placeholder="<?php _e('Mail (will not be published)','html5reset'); ?> <?php if ($req) echo "(required)"; ?>" class="form-control comment-control" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
                 </div>
                 <div>
-                    <input style="width: 40%;" placeholder="<?php _e('Website','html5reset'); ?>" class="form-control comment-control" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" name="website-url-textbox" tabindex="3" />
+                    <input style="width: 40%;" placeholder="<?php _e('Website','html5reset'); ?>" class="form-control comment-control" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" name="website" tabindex="3" />
                 </div>
             <?php endif; ?>
             <!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
